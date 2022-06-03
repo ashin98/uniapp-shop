@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "阿信商城",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "icon": "/components/Icon/Icon",
+    "hot": "/components/Hot/Hot",
+    "index-swiper": "/components/indexSwiper/indexSwiper",
+    "commend": "/components/recommend/index",
+    "card": "/components/Card/index",
+    "commodity-list": "/components/Commodity-List/commodityList/commodityList",
+    "banner": "/components/banner/banner",
+    "shop": "/components/shop/shop"
+  }
+}

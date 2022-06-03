@@ -1,0 +1,11 @@
+
+.card.data-v-45f801a4{
+	padding: 40rpx 0;
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+}
+.card-name.data-v-45f801a4{
+	padding: 0 20rpx;
+}
+

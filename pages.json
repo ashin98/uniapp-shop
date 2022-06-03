@@ -1,0 +1,193 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "阿信商城",
+				"navigationBarBackgroundColor": "#ffffff",
+				//"navigationStyle":"custom", // 自定义导航
+				"app-plus":{
+					"scrollIndicator": "none",
+					"titleNView": {
+						"buttons": [
+							{
+								"float": "left",
+								"fontSrc": "./static/iconfont.ttf",
+								"text": "\ue62d"
+							},
+							{
+								"float": "right",
+								"fontSrc": "./static/iconfont.ttf",
+								"text": "\ue61b"
+							}
+						]
+					}
+				}
+			}
+		}
+	    ,{
+            "path" : "pages/list/list",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my/my",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/shopcar/shopcar",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "components/indexSwiper/indexSwiper",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "components/recommend/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "components/Card/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "components/Commodity-List/commodity/commodity",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "components/Commodity-List/commodityList/commodityList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "components/Commodity-List/commodityList/commodityList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "components/banner/banner",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "components/Icon/Icon",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "components/Icon/Icon",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "components/Hot/Hot",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "components/shop/shop",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/tabbar/icon/home.png",
+			"selectedIconPath": "static/tabbar/icon/home-sel.png",
+			"text": "首页"
+		}, 
+		{
+			"pagePath": "pages/list/list",
+			"iconPath": "static/tabbar/icon/list.png",
+			"selectedIconPath": "static/tabbar/icon/list-sel.png",
+			"text": "分类"
+		},
+		{
+			"pagePath": "pages/shopcar/shopcar",
+			"iconPath": "static/tabbar/icon/shopcar.png",
+			"selectedIconPath": "static/tabbar/icon/shopcar-sel.png",
+			"text": "购物车"
+		},
+		{
+			"pagePath": "pages/my/my",
+			"iconPath": "static/tabbar/icon/my.png",
+			"selectedIconPath": "static/tabbar/icon/my-sel.png",
+			"text": "我的"
+		}
+		]
+	}
+}
