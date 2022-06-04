@@ -1,12 +1,12 @@
 <template>
 	<view class="shop">
-		<view class="shop-item">
+		<view class="shop-item" v-for="(item,index) in dataList" :key="index">
 			<view class="shop-big">
-				<image class="shop-big" src="../../static/shop-img/shop.jpg" mode=""></image>
+				<image class="shop-big" :src="item.bigUrl" mode=""></image>
 			</view>
 			<scroll-view scroll-x="true" class="scroll-content">
 				<view class="scroll-item">
-					<Commodity :dataList="shopList" itemW="200rpx" itemH="200rpx" wrap='nowrap' nameSize="20rpx" clamp="1"></Commodity>
+					<Commodity :dataList="item.data" itemW="200rpx" itemH="200rpx" wrap='nowrap' nameSize="20rpx" clamp="1"></Commodity>
 				</view>
 				
 			</scroll-view>
@@ -20,56 +20,17 @@
 	export default {
 		data() {
 			return {
-				shopList:[
-					{
-						id:1,
-						imageUrl:'/static/shop-img/shop1.jpg',
-						content:'大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-						pprice:'779',
-						oprice:'999',
-						discount:'5.2'
-					},
-					{
-						id:2,
-						imageUrl:'/static/shop-img/shop2.jpg',
-						content:'大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-						pprice:'779',
-						oprice:'999',
-						discount:'5.2'
-					},
-					{
-						id:3,
-						imageUrl:'/static/shop-img/shop3.jpg',
-						content:'大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-						pprice:'779',
-						oprice:'999',
-						discount:'5.2'
-					},
-					{
-						id:4,
-						imageUrl:'/static/shop-img/shop4.jpg',
-						content:'大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-						pprice:'779',
-						oprice:'999',
-						discount:'5.2'
-					},
-					{
-						id:5,
-						imageUrl:'/static/shop-img/shop5.jpg',
-						content:'大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-						pprice:'779',
-						oprice:'999',
-						discount:'5.2'
-					}
-				]
+				
 			}
+		},
+		props:{
+			dataList:Array
 		},
 		components:{
 			Commodity
 		},
-		methods: {
-			
-		}
+		
+		
 	}
 </script>
 

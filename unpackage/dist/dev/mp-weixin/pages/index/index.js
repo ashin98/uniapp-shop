@@ -100,10 +100,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var render = function () {}
-var staticRenderFns = []
-var recyclableRender
 var components
+try {
+  components = {
+    Hot: function() {
+      return Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! @/components/Hot/Hot.vue */ 65))
+    }
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+}
+var recyclableRender = false
+var staticRenderFns = []
+render._withStripped = true
 
 
 
@@ -179,64 +207,125 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var _indexSwiper = _interopRequireDefault(__webpack_require__(/*! @/components/indexSwiper/indexSwiper.vue */ 18));
 var _index = _interopRequireDefault(__webpack_require__(/*! @/components/recommend/index.vue */ 25));
 var _index2 = _interopRequireDefault(__webpack_require__(/*! @/components/Card/index.vue */ 32));
 var _commodityList = _interopRequireDefault(__webpack_require__(/*! @/components/Commodity-List/commodityList/commodityList.vue */ 39));
+
 var _banner = _interopRequireDefault(__webpack_require__(/*! @/components/banner/banner.vue */ 51));
 var _Icon = _interopRequireDefault(__webpack_require__(/*! @/components/Icon/Icon.vue */ 58));
 var _Hot = _interopRequireDefault(__webpack_require__(/*! @/components/Hot/Hot.vue */ 65));
-var _shop = _interopRequireDefault(__webpack_require__(/*! ../../components/shop/shop.vue */ 72));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = { components: { IndexSwiper: _indexSwiper.default, Commend: _index.default, Card: _index2.default, CommodityList: _commodityList.default, Banner: _banner.default, Icon: _Icon.default, Hot: _Hot.default, Shop: _shop.default }, data: function data() {return { // 选中的索引
-      topBarIndex: 0, // 顶部跟随的索引，id值不能为数字
-      scroIntoIndex: "top0", // 内容块高度值
-      clineHeight: 0, topBar: [{ name: "推荐" }, { name: "运动户外" }, { name: "潮流" }, { name: "家具数码" }, { name: "穆荫护府" }, { name: "穆荫护府" }, { name: "穆荫护府" }] };}, methods: { onChangeIndex: function onChangeIndex(index) {if (this.topBarIndex === index) return;this.topBarIndex = index;this.scroIntoIndex = 'top' + index;}, changeTab: function changeTab(e) {this.topBarIndex = e.detail.current;this.scroIntoIndex = 'top' + e.detail.current;} }, onReady: function onReady() {var _this = this;var view = uni.createSelectorQuery().select('.home-data');view.boundingClientRect(function (data) {_this.clineHeight = data.height;}).exec();} };exports.default = _default;
+var _shop = _interopRequireDefault(__webpack_require__(/*! ../../components/shop/shop.vue */ 72));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}var _default =
+{
+  components: {
+    IndexSwiper: _indexSwiper.default,
+    Commend: _index.default,
+    Card: _index2.default,
+    CommodityList: _commodityList.default,
+    Recommend: _index.default,
+    Banner: _banner.default,
+    Icons: _Icon.default,
+    Hot: _Hot.default,
+    Shop: _shop.default },
+
+  data: function data() {
+    return {
+      // 选中的索引
+      topBarIndex: 0,
+      // 顶部跟随的索引，id值不能为数字
+      scroIntoIndex: "top0",
+      // 内容块高度值
+      clineHeight: 0,
+      topBar: [],
+      newTopBar: [] // 承载数据
+    };
+  },
+  methods: {
+    // 点击更新topBarIndex的索引
+    onChangeIndex: function onChangeIndex(index) {
+      if (this.topBarIndex === index) return;
+      this.topBarIndex = index;
+      this.scroIntoIndex = 'top' + index;
+    },
+    // 对应滑动
+    changeTab: function changeTab(e) {
+      this.topBarIndex = e.detail.current;
+      this.scroIntoIndex = 'top' + e.detail.current;
+      this.addData(); //点击topBar切换数据
+    },
+    getIndexData: function getIndexData() {var _this = this;
+      uni.request({
+        url: "http://192.168.226.1:3000/api/index_list",
+        success: function success(res) {
+          var data = res.data.data;
+          _this.topBar = data.topBar;
+          _this.newTopBar = _this.initData(data);
+        } });
+
+    },
+
+    //对应显示不同的数据
+    addData: function addData() {var _this2 = this;
+      // 拿到索引
+      var index = this.topBarIndex;
+      // 拿到id
+      var id = this.topBar[index].id;
+      // 请求不同的数据
+      uni.request({
+        url: 'http://192.168.226.1:3000/api/index_list/' + id + '/data/1',
+        success: function success(res) {
+          var data = res.data.data;
+          _this2.newTopBar[index].data = [].concat(_toConsumableArray(_this2.newTopBar[index].data), _toConsumableArray(data));
+        } });
+
+    },
+
+    initData: function initData(res) {
+      var arr = [];
+      for (var i = 0; i < this.topBar.length; i++) {
+        var obj = {
+          data: [] };
+
+        // 获取首次数据
+        if (i == 0) {
+          obj.data = res.data;
+        }
+        arr.push(obj);
+      }
+      return arr;
+    } },
+
+  onLoad: function onLoad() {
+    this.getIndexData();
+  },
+  onReady: function onReady() {var _this3 = this;
+    // 获取内容区的高度 getSystemInfo可以获取设备的宽高，型号，系统
+    uni.getSystemInfo({
+      success: function success(res) {
+        _this3.clineHeight = res.windowHeight - uni.upx2px(80);
+      } });
+
+  } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
@@ -361,16 +450,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default =
 {
   data: function data() {
@@ -378,6 +457,9 @@ var _default =
 
 
   },
+  props: {
+    dataList: Array },
+
   methods: {} };exports.default = _default;
 
 /***/ }),
@@ -534,14 +616,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 var _default =
 {
   data: function data() {
@@ -549,6 +623,9 @@ var _default =
 
 
   },
+  props: {
+    dataList: Array },
+
   methods: {} };exports.default = _default;
 
 /***/ }),
@@ -859,50 +936,9 @@ var _commodity = _interopRequireDefault(__webpack_require__(/*! @/components/Com
 //
 //
 //
-var _default = { components: { Commodity: _commodity.default }, data: function data() {return { commodityList: [
-      {
-        id: 1,
-        imageUrl: '/static/commodity-img/commodity1.jpg',
-        content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-        pprice: '779',
-        oprice: '999',
-        discount: '5.2' },
-
-      {
-        id: 2,
-        imageUrl: '/static/commodity-img/commodity2.jpg',
-        content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-        pprice: '779',
-        oprice: '999',
-        discount: '5.2' },
-
-      {
-        id: 3,
-        imageUrl: "/static/commodity-img/commodity3.jpg",
-        content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-        pprice: '779',
-        oprice: '999',
-        discount: '5.2' },
-
-      {
-        id: 4,
-        imageUrl: '/static/commodity-img/commodity4.jpg',
-        content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-        pprice: '779',
-        oprice: '999',
-        discount: '5.2' },
-
-      {
-        id: 5,
-        imageUrl: '/static/commodity-img/commodity4.jpg',
-        content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-        pprice: '779',
-        oprice: '999',
-        discount: '5.2' }] };
-
-
-
-  } };exports.default = _default;
+var _default = { components: { Commodity: _commodity.default }, data: function data() {return {};},
+  props: {
+    dataList: Array } };exports.default = _default;
 
 /***/ }),
 /* 44 */
@@ -979,10 +1015,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var render = function () {}
-var staticRenderFns = []
-var recyclableRender
 var components
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+}
+var recyclableRender = false
+var staticRenderFns = []
+render._withStripped = true
 
 
 
@@ -1360,34 +1401,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default =
 {
   data: function data() {
@@ -1395,6 +1408,9 @@ var _default =
 
 
   },
+  props: {
+    dataList: Array },
+
   methods: {} };exports.default = _default;
 
 /***/ }),
@@ -1770,41 +1786,7 @@ var _commodity = _interopRequireDefault(__webpack_require__(/*! ../Commodity-Lis
 //
 //
 //
-var _default = { data: function data() {return { shopList: [{ id: 1, imageUrl: '/static/shop-img/shop1.jpg', content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买', pprice: '779', oprice: '999', discount: '5.2' }, { id: 2, imageUrl: '/static/shop-img/shop2.jpg', content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买', pprice: '779',
-        oprice: '999',
-        discount: '5.2' },
-
-      {
-        id: 3,
-        imageUrl: '/static/shop-img/shop3.jpg',
-        content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-        pprice: '779',
-        oprice: '999',
-        discount: '5.2' },
-
-      {
-        id: 4,
-        imageUrl: '/static/shop-img/shop4.jpg',
-        content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-        pprice: '779',
-        oprice: '999',
-        discount: '5.2' },
-
-      {
-        id: 5,
-        imageUrl: '/static/shop-img/shop5.jpg',
-        content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-        pprice: '779',
-        oprice: '999',
-        discount: '5.2' }] };
-
-
-
-  },
-  components: {
-    Commodity: _commodity.default },
-
-  methods: {} };exports.default = _default;
+var _default = { data: function data() {return {};}, props: { dataList: Array }, components: { Commodity: _commodity.default } };exports.default = _default;
 
 /***/ }),
 /* 77 */

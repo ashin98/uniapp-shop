@@ -92,10 +92,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var render = function () {}
-var staticRenderFns = []
-var recyclableRender
 var components
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+}
+var recyclableRender = false
+var staticRenderFns = []
+render._withStripped = true
 
 
 
@@ -361,41 +366,7 @@ var _commodity = _interopRequireDefault(__webpack_require__(/*! ../Commodity-Lis
 //
 //
 //
-var _default = { data: function data() {return { shopList: [{ id: 1, imageUrl: '/static/shop-img/shop1.jpg', content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买', pprice: '779', oprice: '999', discount: '5.2' }, { id: 2, imageUrl: '/static/shop-img/shop2.jpg', content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买', pprice: '779',
-        oprice: '999',
-        discount: '5.2' },
-
-      {
-        id: 3,
-        imageUrl: '/static/shop-img/shop3.jpg',
-        content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-        pprice: '779',
-        oprice: '999',
-        discount: '5.2' },
-
-      {
-        id: 4,
-        imageUrl: '/static/shop-img/shop4.jpg',
-        content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-        pprice: '779',
-        oprice: '999',
-        discount: '5.2' },
-
-      {
-        id: 5,
-        imageUrl: '/static/shop-img/shop5.jpg',
-        content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-        pprice: '779',
-        oprice: '999',
-        discount: '5.2' }] };
-
-
-
-  },
-  components: {
-    Commodity: _commodity.default },
-
-  methods: {} };exports.default = _default;
+var _default = { data: function data() {return {};}, props: { dataList: Array }, components: { Commodity: _commodity.default } };exports.default = _default;
 
 /***/ }),
 

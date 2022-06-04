@@ -98,25 +98,7 @@
             
         }
         ,{
-            "path" : "components/Commodity-List/commodityList/commodityList",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
             "path" : "components/banner/banner",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "components/Icon/Icon",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",

@@ -1,37 +1,9 @@
 <template>
 	<view class="icon">
 		
-		<view class="icon-item">
-			<image class="icon-img" src="../../static/sportIcon-img/icons1.png" mode=""></image>
-			<text class="name">运动户外</text>
-		</view>
-		<view class="icon-item">
-			<image class="icon-img" src="../../static/sportIcon-img/icons2.png" mode=""></image>
-			<text class="name">运动户外</text>
-		</view>
-		<view class="icon-item">
-			<image class="icon-img" src="../../static/sportIcon-img/icons3.png" mode=""></image>
-			<text class="name">运动户外</text>
-		</view>
-		<view class="icon-item">
-			<image class="icon-img" src="../../static/sportIcon-img/icons4.png" mode=""></image>
-			<text class="name">运动户外</text>
-		</view>
-		<view class="icon-item">
-			<image class="icon-img" src="../../static/sportIcon-img/icons5.png" mode=""></image>
-			<text class="name">运动户外</text>
-		</view>
-		<view class="icon-item">
-			<image class="icon-img" src="../../static/sportIcon-img/icons6.png" mode=""></image>
-			<text class="name">运动户外</text>
-		</view>
-		<view class="icon-item">
-			<image class="icon-img" src="../../static/sportIcon-img/icons7.png" mode=""></image>
-			<text class="name">运动户外</text>
-		</view>
-		<view class="icon-item">
-			<image class="icon-img" src="../../static/sportIcon-img/icons8.png" mode=""></image>
-			<text class="name">运动户外</text>
+		<view class="icon-item" v-for="(item,index) in dataList" :key="index">
+			<image class="icon-img" :src="item.imgUrl" mode=""></image>
+			<text class="name">{{item.name}}</text>
 		</view>
 		
 		
@@ -44,6 +16,9 @@
 			return {
 				
 			}
+		},
+		props:{
+			dataList:Array
 		},
 		methods: {
 			

@@ -1,11 +1,11 @@
 // 单个商品 封装
 <template>
-	<view class="commodity" :style="`flex-wrap:${wrap}`">
+	<view class="commodity" :style="'flex-wrap:'+wrap+';'">
 		<!-- 单个商品组件 -->
-		<view class="commodity-item" v-for="(item,index) in dataList" :key="item.id" :style="`width:${itemW}`">
-				<image class="commodity-img" :src="item.imageUrl" mode="" :style="`height:${itemH}`"></image>
+		<view class="commodity-item" v-for="(item,index) in dataList" :key="item.id" :style="'width:'+itemW+';'">
+				<image class="commodity-img" :src="item.imageUrl" mode="" :style="'width:'+itemW+';' +'height:'+itemH+';'"></image>
 			<view class="commodity-content">
-				<text class="commodity-name" :style="`font-size:${nameSize};-webkit-line-clamp:${clamp}`">{{item.content}}</text>
+				<text class="commodity-name" :style="'font-size:'+nameSize+';'+'-webkit-line-clamp:'+clamp+';'">{{item.name}}</text>
 				<view class="price">
 					<text class="pprice">￥{{item.pprice}}</text>
 					<text class="oprice">￥{{item.oprice}}</text>

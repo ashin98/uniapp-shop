@@ -9,9 +9,7 @@
     "components/Card/index",
     "components/Commodity-List/commodity/commodity",
     "components/Commodity-List/commodityList/commodityList",
-    "components/Commodity-List/commodityList/commodityList",
     "components/banner/banner",
-    "components/Icon/Icon",
     "components/Icon/Icon",
     "components/Hot/Hot",
     "components/shop/shop"

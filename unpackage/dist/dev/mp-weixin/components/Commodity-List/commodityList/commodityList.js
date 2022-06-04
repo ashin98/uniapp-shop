@@ -143,50 +143,9 @@ var _commodity = _interopRequireDefault(__webpack_require__(/*! @/components/Com
 //
 //
 //
-var _default = { components: { Commodity: _commodity.default }, data: function data() {return { commodityList: [
-      {
-        id: 1,
-        imageUrl: '/static/commodity-img/commodity1.jpg',
-        content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-        pprice: '779',
-        oprice: '999',
-        discount: '5.2' },
-
-      {
-        id: 2,
-        imageUrl: '/static/commodity-img/commodity2.jpg',
-        content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-        pprice: '779',
-        oprice: '999',
-        discount: '5.2' },
-
-      {
-        id: 3,
-        imageUrl: "/static/commodity-img/commodity3.jpg",
-        content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-        pprice: '779',
-        oprice: '999',
-        discount: '5.2' },
-
-      {
-        id: 4,
-        imageUrl: '/static/commodity-img/commodity4.jpg',
-        content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-        pprice: '779',
-        oprice: '999',
-        discount: '5.2' },
-
-      {
-        id: 5,
-        imageUrl: '/static/commodity-img/commodity4.jpg',
-        content: '大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买大姨绒毛大款2022年必须买',
-        pprice: '779',
-        oprice: '999',
-        discount: '5.2' }] };
-
-
-
-  } };exports.default = _default;
+var _default = { components: { Commodity: _commodity.default }, data: function data() {return {};},
+  props: {
+    dataList: Array } };exports.default = _default;
 
 /***/ }),
 
@@ -266,10 +225,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var render = function () {}
-var staticRenderFns = []
-var recyclableRender
 var components
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+}
+var recyclableRender = false
+var staticRenderFns = []
+render._withStripped = true
 
 
 
